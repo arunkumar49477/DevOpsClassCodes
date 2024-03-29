@@ -5,7 +5,7 @@ pipeline {
     maven 'mymaven'
   }
   stages {
-      stage('Clonerepo') {
+      stage('Clonerepo from github') {
          steps {
             git 'https://github.com/bhasker-manikyala/DevOpsClassCodes.git'
          }

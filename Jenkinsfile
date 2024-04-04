@@ -11,6 +11,11 @@ pipeline {
             sh 'mvn compile'
          }
       }
+     stage('Build') {
+        steps {
+            sh 'mvn clean package'
+        }
+     }
       stage('CodeReview') {
          steps {
             sh 'mvn pmd:pmd'
@@ -21,6 +26,10 @@ pipeline {
             sh 'mvn test'
          }
       }
-
+      stage('Package') {
+    steps {
+        sh 'mvn package'
+    }
+}
   }
 }

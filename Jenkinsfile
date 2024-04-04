@@ -6,7 +6,7 @@ pipeline {
             git 'https://github.com/bhasker-manikyala/DevOpsClassCodes.git'
          }
       }
-      stage('Compile the code ') {
+      stage('Compile the code') {
          steps {
             sh 'mvn compile'
          }

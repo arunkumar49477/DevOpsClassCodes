@@ -1,9 +1,5 @@
 pipeline {
     agent any
-  tools {
-    jdk 'myjava'
-    maven 'mymaven'
-  }
   stages {
       stage('Clonerepo from github') {
          steps {
